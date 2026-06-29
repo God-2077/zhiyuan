@@ -14,8 +14,9 @@ def run_command(command:list)->bool:
             text=True
         )
     except subprocess.CalledProcessError as e:
-        print(f"Error running command: {e}")
+        print(f"Error running command: {e}", end="\n")
         return False
+    print(f"success running [{command}]", end="\n")
     return True
 
 def main():
